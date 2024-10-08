@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #000D29; display: flex; justify-content: center; align-items: center; height: 100vh; }
+        form { border: 1px solid #ccc; padding: 20px; border-radius: 5px; width: 300px;background-color: #FFFFFF; }
+        input { margin-bottom: 10px; padding: 10px; width: 90%; }
+        label { margin-bottom: 10px; padding: 10px; width: 90%; }
+        button { padding: 10px; width: 100%; background-color: #145B91; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        .link { display: block; text-align: center; margin-top: 10px; color: #000000; text-decoration: none; }
+        
+    </style>
+</head>
+<body>
+    <form action="LoginServlet" method="post">
+        <h2>Login</h2>
+        
+        <label for="username">Usuário:</label>
+        <input type="text" placeholder="Digite o seu usuário" id="username" name="username" required>
+        
+        <label for="password">Senha:</label>
+        <input type="password" placeholder="Digite a sua senha" id="password" name="password" required>
+        <button type="submit">Entrar</button>
+        
+        <a href="criaUsuLogin.html" class="link">Criar Usuário</a>
+        <a href="esqueciSenha.html" class="link">Esqueci a Senha</a>
+        <a href="telaBase.html" class="link">vai p quela tela (tirrar esse butão)</a>
+    </form>
+</body>
+</html>

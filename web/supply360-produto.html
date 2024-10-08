@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão | SoloLeve</title>
+    <link rel="icon" href="img/SoloLeveOFFICIAL.png" type="image/x-icon" sizes="20x40">
+    <link rel="stylesheet" href="supply360.css">
+</head>
+
+<body class="flex flex-col min-h-screen bg-orchidBlossom font-poppins">
+    <button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" type="button"
+        class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-blazeOrange rounded-lg">
+        <span class="sr-only">Abrir</span>
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path clip-rule="evenodd" fill-rule="evenodd"
+                d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+            </path>
+        </svg>
+    </button>
+
+    <aside
+  id="default-sidebar"
+  class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full lg:translate-x-0 bg-white"
+>
+  <div class="overflow-y-auto py-5 px-3 h-full border-r border-white">
+    <a
+      href="index.html"
+      class="flex items-center uppercase tracking-supply360 p-2 text-2xl text-blazeOrange group button-hover"
+    >
+      <img
+        src="img/SoloLeveOFFICIAL.png"
+        alt="Favicon"
+        class="h-20 w-40 mr-2"
+      />
+    </a>
+    <ul class="pt-5 mt-5 space-y-2 border-t border-blazeOrange">
+      <li>
+        <a
+          href="telaBase.html"
+          class="flex items-center p-2 text-base text-blazeOrange border border-blazeOrange rounded-lg pulse-on-hover"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6 text-blazeOrange transition duration-75"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+            />
+          </svg>
+
+          <span class="ml-3">Início</span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="supply360-produto.html"
+          class="flex items-center p-2 text-base text-blazeOrange border border-blazeOrange rounded-lg pulse-on-hover"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6 text-blazeOrange transition duration-75"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m20.25 7.5-.625 10.632a2.25 2.25 0 0 1-2.247 2.118H6.622a2.25 2.25 0 0 1-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z"
+            />
+          </svg>
+
+          <span class="ml-3">Desenvolvedores</span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="supply360-pedido.html"
+          class="flex items-center p-2 text-base text-blazeOrange border border-blazeOrange rounded-lg pulse-on-hover"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6 text-blazeOrange transition duration-75"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 0 0 2.25-2.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v2.25A2.25 2.25 0 0 0 6 10.5Zm0 9.75h2.25A2.25 2.25 0 0 0 10.5 18v-2.25a2.25 2.25 0 0 0-2.25-2.25H6a2.25 2.25 0 0 0-2.25 2.25V18A2.25 2.25 0 0 0 6 20.25Zm9.75-9.75H18a2.25 2.25 0 0 0 2.25-2.25V6A2.25 2.25 0 0 0 18 3.75h-2.25A2.25 2.25 0 0 0 13.5 6v2.25a2.25 2.25 0 0 0 2.25 2.25Z"
+            />
+          </svg>
+
+          <span class="ml-3">Tarefas</span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="supply360-cliente.html"
+          class="flex items-center p-2 text-base text-blazeOrange border border-blazeOrange rounded-lg pulse-on-hover"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6 text-blazeOrange transition duration-75"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m20.25 7.5-.625 10.632a2.25 2.25 0 0 1-2.247 2.118H6.622a2.25 2.25 0 0 1-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z"
+            />
+          </svg>
+
+          <span class="ml-3">Usuário</span>
+        </a>
+      </li>
+      <!-- Nova opção de "Sair" -->
+      <li>
+        <a
+          href="index.html"
+          class="flex items-center p-2 text-base text-blazeOrange border border-blazeOrange rounded-lg pulse-on-hover"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6 text-blazeOrange transition duration-75"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3H6.75A2.25 2.25 0 0 0 4.5 5.25v13.5A2.25 2.25 0 0 0 6.75 21h6.75a2.25 2.25 0 0 0 2.25-2.25V15M9 15l6-6M9 9h9"
+            />
+          </svg>
+
+          <span class="ml-3">Sair</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</aside>
+
+    <div id="content-wrapper" class="flex-1 p-6 ml-0 lg:ml-64 transition-margin duration-300 ease-in-out">
+        <main class="flex-1 p-6">
+            <section class="p-3 sm:p-5 antialiased pulse section-">
+                <div class="mx-auto max-w-screen-xl px-4 lg:px-12 relative">
+                    <div class="bg-white relative shadow-md sm:rounded-lg overflow-y-auto">
+                        <div
+                            class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 md:space-x-4 p-4">
+                            <div class="w-full md:w-1/2 ">
+                                <form class="flex items-center">
+                                    <label for="simple-search" class="sr-only">Pesquisar</label>
+
+                                    <div class="relative w-full">
+                                        <div
+                                            class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                            <svg class="w-5 h-5 text-blazeOrange" fill="currentColor"
+                                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd"
+                                                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </div>
+                                        <input type="text" id="simple-search"
+                                            class="bg-white border border-blazeOrange text-blazeOrange placeholder-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full pl-10 p-2"
+                                            placeholder="Pesquisar" required="">
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div
+                                class="pulse-on-hover w-full md:w-auto flex flex-col md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0">
+                                <button type="button" id="createProductModalButton"
+                                    data-modal-target="createProductModal" data-modal-toggle="createProductModal"
+                                    class="flex items-center justify-center text-white bg-blazeOrange hover:bg-white hover:text-blazeOrange border border-blazeOrange focus:ring-4 focus:ring-blazeOrange font-medium rounded-lg text-sm px-4 py-2 focus:outline-none">
+                                    <svg class="h-3.5 w-3.5 mr-2" fill="currentColor" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path clip-rule="evenodd" fill-rule="evenodd"
+                                            d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" />
+                                    </svg>
+                                    Adicionar Desenvolvedor
+                                </button>
+                                 </div>
+                             <div class="pulse-on-hover w-full md:w-auto flex flex-col md:flex-row space-y-2 md:space-y-0 items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0">
+                                 
+                                <button type="button" id="updateTable"
+                                class="flex items-center justify-center text-white bg-blazeOrange hover:bg-white hover:text-blazeOrange border border-blazeOrange focus:ring-4 focus:ring-blazeOrange font-medium rounded-lg text-sm px-4 py-2 focus:outline-none">
+                                    <svg class="h-3.5 w-3.5 mr-2" fill="currentColor" viewBox="0 0 20 20"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                         <path clip-rule="evenodd" fill-rule="evenodd"
+                                            d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" />
+                                     </svg>
+                                 Listar Desenvolvedores
+                                </button>
+                                     
+                             </div>
+
+                            <button id="filterDropdownButton" data-dropdown-toggle="filterDropdown"
+                                class=" modal-hover w-full md:w-auto flex items-center justify-center py-2 px-4 text-sm font-medium text-blazeOrange focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200"
+                                type="button">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                    class="h-4 w-4 mr-2 text-gray-400" viewbox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M3 3a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-.293.707L12 11.414V15a1 1 0 01-.293.707l-2 2A1 1 0 018 17v-5.586L3.293 6.707A1 1 0 013 6V3z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                Filter
+                                <svg class="-mr-1 ml-1.5 w-5 h-5" fill="currentColor" viewbox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path clip-rule="evenodd" fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+                                </svg>
+                            </button>
+
+
+                            <div id="filterDropdown" class="z-10 hidden w-56 p-3 bg-white rounded-lg shadow modal-hover">
+                                <h6 class="mb-3 text-sm font-medium text-blazeOrange ">Category</h6>
+                                <ul class="space-y-2 text-sm" aria-labelledby="filterDropdownButton">
+                                    <li class="flex items-center">
+                                        <input id="apple" type="checkbox" value=""
+                                            class="w-4 h-4 bg-gray-100 border-gray-300 rounded text-primary-600 focus:ring-primary-500 ">
+                                        <label for="apple" class="ml-2 text-sm font-medium text-gray-900 ml-3">Apple
+                                            (56)</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="">
+                            <iframe name="centro" id="centro"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div id="createProductModal" tabindex="-1"
+            class="hidden fixed top-0 right-0 bottom-0 left-0 z-40 flex items-center justify-center bg-black bg-opacity-50 modal-hover">
+                <div class="relative p-4 w-full max-w-2xl bg-white rounded-lg shadow-lg modal-content">
+                    <div class="flex justify-between items-center pb-4 mb-4 rounded-t border-b border-blazeOrange">
+                        <h3 class="text-lg font-semibold text-blazeOrange">Adicionar Desenvolvedor</h3>
+                        <button type="button"
+                            class="text-blazeOrange bg-transparent hover:bg-blazeOrange hover:text-white rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+                            data-modal-target="createProductModal" data-modal-toggle="createProductModal">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="sr-only">Fechar</span>
+                        </button>
+                    </div>
+                    <form action="finalizarprod.jsp" class="px-6 py-4">
+                        <div class="grid gap-4 mb-4 sm:grid-cols-2">
+                            <div>
+                                <label for="name" class="block mb-2 text-sm font-medium text-blazeOrange">Nome do Desenvolvedor</label>
+                                <input type="text" name="name" id="name"
+                                    class="button-hover border placeholder-blazeOrange border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5"
+                                    placeholder="Digite o Nome do Desenvolvedor" required="">
+                            </div>
+                            <div>
+                                <label for="id" class="block mb-2 text-sm font-medium text-blazeOrange">ID Desenvolvedor</label>
+                                <input type="number" name="id" id="id"
+                                    class="button-hover border placeholder-blazeOrange border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5"
+                                    placeholder="Digite o ID do Desenvolvedor" required="">
+                            </div>
+                            <div>
+                                <label for="descricao" class="block mb-2 text-sm font-medium text-blazeOrange">E-mail Desenvolvedor</label>
+                                <input type="text" name="descricao" id="descricao"
+                                    class="button-hover border placeholder-blazeOrange border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5"
+                                    placeholder="E-mail do Desenvolvedor" required="">
+                            </div>
+                        </div>
+                       <button type="submit" value="salvar"
+                        class="text-white inline-flex items-center bg-blazeOrange hover:bg-white hover:text-blazeOrange border border-blazeOrange focus:ring-4 focus:outline-none focus:ring-blazeOrange font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                        <svg class="mr-1 -ml-1 w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        Finalizar
+                    </button>
+                    </form>
+                    
+                </div>
+
+            </div>
+
+            <div id="updateProductModal" tabindex="-1"
+                class="hidden fixed top-0 right-0 bottom-0 left-0 z-40 flex items-center justify-center bg-black bg-opacity-50 modal-hover">
+                <div class="relative p-4 w-full max-w-2xl bg-white rounded-lg shadow-lg modal-content">
+                    <div class="flex justify-between items-center pb-4 mb-4 rounded-t border-b border-blazeOrange">
+                        <h3 class="text-lg font-semibold text-blazeOrange">Editar produto</h3>
+                        <button type="button"
+                            class="text-blazeOrange bg-transparent hover:bg-blazeOrange hover:text-white rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+                            data-modal-target="createProductModal" data-modal-toggle="createProductModal">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="sr-only">Fechar</span>
+                        </button>
+                    </div>
+                    <form action="finalizarprod.jsp" class="px-6 py-4">
+                        <div class="grid gap-4 mb-4 sm:grid-cols-2">
+                            <div>
+                                <label for="name" class="block mb-2 text-sm font-medium text-blazeOrange">Nome do Desenvolvedor</label>
+                                <input type="text" name="name" id="name"
+                                       class="button-hover border placeholder-blazeOrange border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5"
+                                       placeholder="Digite o Nome do Desenvolvedor" required="">
+                            </div>
+                            <div>
+                                <label for="id" class="block mb-2 text-sm font-medium text-blazeOrange">ID Desenvolvedor</label>
+                                <input type="number" name="id" id="id"
+                                       class="button-hover border placeholder-blazeOrange border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5"
+                                       placeholder="Digite o ID do Desenvolvedor" required="">
+                            </div>
+                            <div>
+                                <label for="descricao" class="block mb-2 text-sm font-medium text-blazeOrange">E-mail Desenvolvedor</label>
+                                <input type="text" name="descricao" id="descricao"
+                                       class="button-hover border placeholder-blazeOrange border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5"
+                                       placeholder="E-mail do Desenvolvedor" required="">
+                            </div>
+                        </div>
+                    </form>
+                    <button type="submit"
+                        class="text-white inline-flex items-center bg-blazeOrange hover:bg-white hover:text-blazeOrange border border-blazeOrange focus:ring-4 focus:outline-none focus:ring-blazeOrange font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                        <svg class="mr-1 -ml-1 w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        Finalizar
+                    </button>
+                </div>
+
+            </div>
+
+    </div>
+
+
+    <div id="readProductModal" tabindex="-1"
+        class="hidden fixed top-0 right-0 bottom-0 left-0 z-40 flex items-center justify-center bg-black bg-opacity-50 modal-hover">
+        <div class="relative p-4 w-full max-w-xl max-h-full modal-content">
+            <div class="relative p-4 bg-white rounded-lg shadow sm:p-5">
+                <div class="flex justify-between mb-4 rounded-t sm:mb-5">
+                    <div class="text-lg text-blazeOrange md:text-xl">
+                        <h3 class="font-semibold">Produto</h3>
+                        <p class="font-bold">ID</p>
+                    </div>
+                    <div>
+                        <button type="button"
+                            class="text-blazeOrange bg-transparent hover:bg-blazeOrange hover:text-white rounded-lg text-sm p-1.5 inline-flex"
+                            data-modal-toggle="readProductModal">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="sr-only">Fechar</span>
+                        </button>
+                    </div>
+                </div>
+                <dl>
+                    <dt class="mb-2 font-semibold leading-none text-blazeOrange">Nome</dt>
+                    <dd class="mb-4 font-light text-blazeOrange sm:mb-5">Baby Fabio</dd>
+                    <dt class="mb-2 font-semibold leading-none text-blazeOrange">Descrição</dt>
+                    <dd class="mb-4 font-light text-blazeOrange sm:mb-5">Lorem ipsum dolor, sit amet consectetur
+                        adipisicing elit. Animi optio nisi possimus, praesentium doloribus iusto?</dd>
+                    
+                    <dt class="mb-2 font-semibold leading-none text-blazeOrange">Quantidade</dt>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+    <div id="deleteModal" tabindex="-1"
+        class="hidden fixed top-0 right-0 bottom-0 left-0 z-40 flex items-center justify-center bg-black bg-opacity-50 modal-hover">
+        <div class="relative p-4 w-full max-w-md max-h-full modal-content">
+            <div class="relative p-4 text-center bg-white rounded-lg shadow sm:p-5">
+                <svg class="text-blazeOrange w-11 h-11 mb-3.5 mx-auto" fill="currentColor" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
+                        clip-rule="evenodd"></path>
+                </svg>
+                <p class="mb-4 text-blazeOrange">Você tem certeza que quer remover esse produto?</p>
+                <div class="flex justify-center items-center space-x-4">
+                    <button data-modal-toggle="deleteModal" type="button"
+                        class="py-2 px-3 text-sm font-medium text-blazeOrange bg-white rounded-lg border border-blazeOrange focus:z-10">Não,
+                        cancele</button>
+                    <button type="submit"
+                        class="py-2 px-3 text-sm font-medium text-center text-white bg-blazeOrange rounded-lg">Sim,
+                        tenho certeza</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+    <footer class="bg-white rounded-lg shadow m-4">
+        <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between ">
+            <span class="text-sm text-blazeOrange sm:text-center">Copyright &copy; 2024 | SoloLeve
+            </span>
+            <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-blazeOrange sm:mt-0 modal-hover">
+                <li>
+                    <a href="telaBase.html" class="hover:underline me-4 md:me-6">Sobre</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    </div>
+    <script src="supply360.js"></script>
+    <script>
+    document.getElementById("updateTable").addEventListener("click", function() {
+        document.getElementById("centro").src = "tabelaCliente.jsp"; // Caminho do arquivo JSP
+    });
+</script>
+</body>
+
+</html>
