@@ -16,48 +16,49 @@
 <body>
 
 <%
-    int idCliente = 0;
-    int idPedido = 0;
-    java.sql.Date dataPedidoSql = null;
+   // Receber os dados digitados no formulário codpro.html
+    int idTask;
+    String descTask;
+    int idDev;
+    int typeTaskId;
+    Date dtConclusao;
+    String status;
+    
 
-    try {
-        if (request.getParameter("id_cliente") != null && request.getParameter("id_pedido") != null && request.getParameter("data_pedido") != null) {
-            idCliente = Integer.parseInt(request.getParameter("id_cliente"));
-            idPedido = Integer.parseInt(request.getParameter("id_pedido"));
-            String dataPedidoStr = request.getParameter("data_pedido");
-            
-            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-            Date parsedDate = format.parse(dataPedidoStr);
-            dataPedidoSql = new java.sql.Date(parsedDate.getTime());
+    Connection conecta = null;
+    PreparedStatement stTarefas = null;
 
-            Connection conecta;
-            PreparedStatement st;
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            conecta = DriverManager.getConnection("jdbc:mysql://localhost:3306/banco303", "root", "");
+    
+        idTask = Integer.parseInt(request.getParameter("idTask"));
+        descTask = request.getParameter("descTask");
+        idDev = request.getParameter("idDev");
+        typeTaskId = Integer.parseInt(request.getParameter("typeTaskId"));
+        dtConclusao = request.getParameter("dtConclusao");
+        statusTask = request.getParameter("statusTask");
 
-            String query = "INSERT INTO pedido (Id_Cliente, Id_Pedido, Data_Pedido) VALUES (?, ?, ?)";
-            st = conecta.prepareStatement(query);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
-            st.setInt(1, idCliente);
-            st.setInt(2, idPedido);
-            st.setDate(3, dataPedidoSql);
+         // Converte a String para LocalDate
+        LocalDate date = LocalDate.parse(dtConclusao, formatter);
 
-            st.executeUpdate(); // Executa o comando insert
+        // Fazer conexão com o banco de dados
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        conecta = DriverManager.getConnection("jdbc:mysql://localhost:3306/SoloLeve", "root", "");
+        conecta.setAutoCommit(false); // Iniciar transação
 
-            out.print("Pedido cadastrado com sucesso!");
+        // Inserir os dados na tabela produto do banco de dados aberto
+        stTarefas = conecta.prepareStatement("INSERT INTO Tarefas (id_task, descricao_task, desenvolvedor_id, tipo_tarefa_id, data_conclusao, status) VALUES (?, ?, ?, ?, ?, ?)");
+        stTarefas.setInt(1, idTask);
+        stTarefas.setString(2, descTask);
+        stTarefas.setInt(3, idDev);
+        stTarefas.setInt(4, typeTaskId);
+        stTarefas.setDate(5, dtConclusao);
+        stTarefas.setInt(6, statusTask);
+        stTarefas.executeUpdate();
 
-            st.close();
-            conecta.close();
-        } else {
-            out.print("Todos os campos são obrigatórios.");
-        }
-    } catch (SQLException | ClassNotFoundException e) {
-        out.print("Erro: " + e.getMessage());
-    } catch (NumberFormatException e) {
-        out.print("Erro de formato: " + e.getMessage());
-    } catch (ParseException e) {
-        out.print("Erro de parsing de data: " + e.getMessage());
-    }
+        // Commitar a transação
+        conecta.commit();
+   
 %>
 
 </body>

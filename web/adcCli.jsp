@@ -16,38 +16,39 @@
 <body>
 
 <%
-    int idCliente;
-    String telefone;
-    String nome;
-    int cadastro;
-    String email;
-    String endereco;
+    int idUsuario;
+    String nomeUsuario;
+    String emailUsuario;
+    String senhaUsuario;
+    String statusUsu;
+    String status;
+    int desenvolvedorId;
     
 
     
-            
-            idCliente = Integer.parseInt(request.getParameter("id_cliente"));
-            telefone = request.getParameter("telefone");
-            nome = request.getParameter("nome");
-            cadastro = Integer.parseInt(request.getParameter("cadastro"));
-            email = request.getParameter("email");
-            endereco = request.getParameter("endereco");
-            
+            idUsuario = Integer.parseInt(request.getParameter("id_Usuario"));
+            nomeUsuario = request.getParameter("nome_Usuario");
+            emailUsuario = request.getParameter("email_Usuario");
+            senhaUsuario = request.getParameter("senha_Usuario");
+            statusUsu = request.getParameter("status_Usu");
+            status = request.getParameter("status");
+            desenvolvedorId = Integer.parseInt(request.getParameter("id_Dev"));
 
             Connection conecta;
             PreparedStatement st;
             Class.forName("com.mysql.cj.jdbc.Driver");
-            conecta = DriverManager.getConnection("jdbc:mysql://localhost:3306/banco303", "root", "");
+            conecta = DriverManager.getConnection("jdbc:mysql://localhost:3306/SoloLeve", "root", "");
 
-            String query = "INSERT INTO cliente (Id_Cliente, Nome_Cliente, Ender_Cliente, Telef_Cliente, Cadas_Cliente, Email_Cliente) VALUES (?, ?, ?, ?, ?, ?)";
+            String query = "INSERT INTO Usuarios (nome_usu, email_usu, senha_usu, status, desenvolvedor_id) VALUES (?,?,?,?,?,?,?)";
             st = conecta.prepareStatement(query);
 
-            st.setInt(1, idCliente);
-            st.setString(2, nome);
-            st.setString(3, endereco);
-            st.setString(4, telefone);
-            st.setInt(5, cadastro);
-            st.setString(6, email);
+            st.setInt(1, idUsuario);
+            st.setString(2, nomeUsuario);
+            st.setString(3, emailUsuario);
+            st.setString(4, senhaUsuario);
+            st.setString(5, statusUsu);
+            st.setString(6, status);
+            st.setInt(7, desenvolvedorId);
             
 
             st.executeUpdate(); // Executa o comando insert

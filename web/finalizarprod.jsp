@@ -14,38 +14,31 @@
 
 <%
     // Receber os dados digitados no formulário codpro.html
-    int codigo;
-    String nome;
-    String descricao;
-    int quantidade;
+    int idDev;
+    String nomeDev;
+    String emailDev;
+    
 
     Connection conecta = null;
-    PreparedStatement stProduto = null;
-    PreparedStatement stEstoque = null;
+    PreparedStatement stDesenvolvedores = null;
 
     
-        codigo = Integer.parseInt(request.getParameter("id"));
-        nome = request.getParameter("name");
-        descricao = request.getParameter("descricao");
-        quantidade = Integer.parseInt(request.getParameter("quantidade"));
+        idDev = Integer.parseInt(request.getParameter("id"));
+        nomeDev = request.getParameter("name");
+        emailDev = request.getParameter("email");
+       
 
         // Fazer conexão com o banco de dados
         Class.forName("com.mysql.cj.jdbc.Driver");
-        conecta = DriverManager.getConnection("jdbc:mysql://localhost:3306/banco303", "root", "");
+        conecta = DriverManager.getConnection("jdbc:mysql://localhost:3306/SoloLeve", "root", "");
         conecta.setAutoCommit(false); // Iniciar transação
 
         // Inserir os dados na tabela produto do banco de dados aberto
-        stProduto = conecta.prepareStatement("INSERT INTO produto (Id_Produto, Nome_Produto, Descr_Produto) VALUES (?, ?, ?)");
-        stProduto.setInt(1, codigo);
-        stProduto.setString(2, nome);
-        stProduto.setString(3, descricao);
-        stProduto.executeUpdate();
-
-        // Inserir os dados na tabela estoque
-        stEstoque = conecta.prepareStatement("INSERT INTO estoque (Id_Estoque, Qtd_Estoque) VALUES (?, ?)");
-        stEstoque.setInt(1, codigo);
-        stEstoque.setInt(2, quantidade);
-        stEstoque.executeUpdate();
+        stDesenvolvedores = conecta.prepareStatement("INSERT INTO Desenvolvedores (id_desenvol, nome_desenvol, email_desenvol) VALUES (?, ?, ?)");
+        stDesenvolvedores.setInt(1, idDev);
+        stDesenvolvedores.setString(2, nomeDev);
+        stDesenvolvedores.setString(3, emailDev);
+        stDesenvolvedores.executeUpdate();
 
         // Commitar a transação
         conecta.commit();

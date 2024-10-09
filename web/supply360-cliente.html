@@ -239,6 +239,8 @@
                                         <th scope="col" class="px-4 py-3">Nome Usuário</th>
                                         <th scope="col" class="px-4 py-3">E-mail usuário</th>
                                         <th scope="col" class="px-4 py-4">Senha</th>
+                                        <th scope="col" class="px-4 py-4">Status Usuario</th>
+                                        <th scope="col" class="px-4 py-4">Status</th>
                                         <th scope="col" class="px-4 py-3">ID Desenvolvedor</th>
                                         <th scope="col" class="px-4 py-3"></th>
                                     </tr>
@@ -251,6 +253,8 @@
                                         <td class="px-4 py-3">Nome Usuário</td>
                                         <td class="px-4 py-3">E-mail Usuário</td>
                                         <td class="px-4 py-3">Senha</td>
+                                        <td class="px-4 py-3">Status Usuario</td>
+                                        <td class="px-4 py-3">Status</td>
                                         <td class="px-4 py-3">ID Desenvolvedor</td>
                                        
 
@@ -337,32 +341,44 @@
                     <form action="adcCli.jsp" class="px-6 py-4">
                         <div class="grid gap-4 mb-4 sm:grid-cols-2">
                             <div>
-                                <label for="id_cliente" class="block mb-2 text-sm font-medium text-blazeOrange">ID Usuário</label>
-                                <input type="number" name="id_cliente" id="id_cliente"
+                                <label for="id_Usuario" class="block mb-2 text-sm font-medium text-blazeOrange">ID Usuário</label>
+                                <input type="number" name="id_Usuario" id="id_Usuario"
                                     class="button-hover border placeholder-blazeOrange border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5"
                                     placeholder="Digite o ID do Usuário" required="">
                             </div>
                             <div>
-                                <label for="nome" class="block mb-2 text-sm font-medium text-blazeOrange">Nome Usuário</label>
-                                <input type="text" name="nome" id="nome"
+                                <label for="nome_Usuario" class="block mb-2 text-sm font-medium text-blazeOrange">Nome Usuário</label>
+                                <input type="text" name="nome_Usuario" id="nome_Usuario"
                                     class="button-hover border placeholder-blazeOrange border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5"
                                     placeholder="Digite o Nome do Usuário" required="">
                             </div>
                             <div>
-                                <label for="email" class="block mb-2 text-sm font-medium text-blazeOrange">Email</label>
-                                <input type="email" name="email" id="email"
+                                <label for="email_Usuario" class="block mb-2 text-sm font-medium text-blazeOrange">Email</label>
+                                <input type="email" name="email" id="email_Usuario"
                                     class="button-hover border placeholder-blazeOrange border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5"
                                     placeholder="Email" required="">
                             </div>
                             <div>
-                                <label for="telefone" class="block mb-2 text-sm font-medium text-blazeOrange">Senha Usuário</label>
-                                <input type="tel" name="telefone" id="telefone"
+                                <label for="senha_Usuario" class="block mb-2 text-sm font-medium text-blazeOrange">Senha Usuário</label>
+                                <input type="password" name="telefone" id="senha_Usuario"
                                     class="button-hover border placeholder-blazeOrange border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5"
                                     placeholder="Senha" required="">
                             </div>
                             <div>
-                                <label for="cadastro" class="block mb-2 text-sm font-medium text-blazeOrange">ID Desenvolvedor</label>
-                                <input type="number" name="cadastro" id="cadastro"
+                              <label for="status_Usu" class="block mb-2 text-sm font-medium text-blazeOrange">Status Usuario</label>
+                              <input type="password" name="telefone" id="status_Usu"
+                                  class="button-hover border placeholder-blazeOrange border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5"
+                                  placeholder="Senha" required="">
+                          </div>
+                          <div>
+                            <label for="status" class="block mb-2 text-sm font-medium text-blazeOrange">Status</label>
+                            <input type="password" name="telefone" id="status"
+                                class="button-hover border placeholder-blazeOrange border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5"
+                                placeholder="Senha" required="">
+                        </div>
+                            <div>
+                                <label for="id_Dev" class="block mb-2 text-sm font-medium text-blazeOrange">ID Desenvolvedor</label>
+                                <input type="number" name="cadastro" id="id_Dev"
                                     class="button-hover border placeholder-blazeOrange border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5"
                                     placeholder="ID do Desenvolvedor" required="">
                             </div>
@@ -432,6 +448,18 @@
                                     placeholder="Senha do Usuário" required="">
                             </div>
                             <div>
+                              <label for="status_Usu" class="block mb-2 text-sm font-medium text-blazeOrange">Status Usuário</label>
+                              <input type="string" name="telefone" id="status_Usu"
+                                  class="button-hover border placeholder-blazeOrange border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5"
+                                  placeholder="Senha do Usuário" required="">
+                          </div>
+                          <div>
+                            <label for="status" class="block mb-2 text-sm font-medium text-blazeOrange">Status</label>
+                            <input type="tel" name="telefone" id="status"
+                                class="button-hover border placeholder-blazeOrange border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5"
+                                placeholder="Senha do Usuário" required="">
+                        </div>
+                            <div>
                                 <label for="cadastro" class="block mb-2 text-sm font-medium text-blazeOrange">ID Desenvolvedor</label>
                                 <input type="number" name="cadastro" id="cadastro"
                                     class="button-hover border placeholder-blazeOrange border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5"
@@ -486,6 +514,8 @@
                     <dt class="mb-2 font-semibold leading-none text-blazeOrange">Nome Usuário</dt>
                     <dt class="mb-2 font-semibold leading-none text-blazeOrange">E-mail usuário</dt>
                     <dt class="mb-2 font-semibold leading-none text-blazeOrange">Senha</dt>
+                    <dt class="mb-2 font-semibold leading-none text-blazeOrange">Status Usuario</dt>
+                    <dt class="mb-2 font-semibold leading-none text-blazeOrange">Status</dt>
                     <dt class="mb-2 font-semibold leading-none text-blazeOrange">ID Desenvolvedor</dt>
             </div>
         </div>

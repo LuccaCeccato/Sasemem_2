@@ -338,32 +338,32 @@
                     <form action="finalizarped.jsp" class="px-6 py-4">
                         <div class="grid gap-4 mb-4 sm:grid-cols-2">
                             <div>
-                                <label for="id_cliente" class="block mb-2 text-sm font-medium text-blazeOrange">ID Tarefa</label>
-                                <input type="number" name="id_cliente" id="id_cliente"
+                                <label for="idTask" class="block mb-2 text-sm font-medium text-blazeOrange">ID Tarefa</label>
+                                <input type="number" name="idTask" id="idTask"
                                     class="bg-white border placeholder-blazeOrange border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5"
                                     placeholder="Digite o ID da Tarefa" required="">
                             </div>
                             <div>
-                                <label for="id_pedido" class="block mb-2 text-sm font-medium text-blazeOrange">ID Desenvolvedor</label>
-                                <input type="number" name="id_pedido" id="id_pedido"
+                                <label for="devId" class="block mb-2 text-sm font-medium text-blazeOrange">ID Desenvolvedor</label>
+                                <input type="number" name="devId" id="devId"
                                     class="bg-white border placeholder-blazeOrange border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5"
                                     placeholder="Digite o ID do Desenvolvedor" required="">
                             </div>
                             <div>
-                                <label for="data_pedido" class="block mb-2 text-sm font-medium text-blazeOrange">Data de Conclução</label>
-                                <input type="date" name="data_pedido" id="data_pedido"
+                                <label for="dtConclusao" class="block mb-2 text-sm font-medium text-blazeOrange">Data de Conclução</label>
+                                <input type="date" name="dtConclusao" id="dtConclusao"
                                     class="bg-white border placeholder-blazeOrange border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5"
                                     placeholder="Digite o data de Conclução" required="">
                             </div>
                             <div>
-                                <label for="descricao" class="block mb-2 text-sm font-medium text-blazeOrange">Descrição da Tarefa</label>
-                                <input type="text" name="descricao" id="descricao"
+                                <label for="descTask" class="block mb-2 text-sm font-medium text-blazeOrange">Descrição da Tarefa</label>
+                                <input type="text" name="descTask" id="descTask"
                                     class="button-hover border placeholder-blazeOrange border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5"
                                     placeholder="Descrição" required="">
                             </div>
                             <div>
-                                <label for="descricao" class="block mb-2 text-sm font-medium text-blazeOrange">Status Da Tarefa</label>
-                                <input type="text" name="descricao" id="descricao"
+                                <label for="statusTask" class="block mb-2 text-sm font-medium text-blazeOrange">Status Da Tarefa</label>
+                                <input type="text" name="statusTask" id="statusTask"
                                     class="button-hover border placeholder-blazeOrange border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5"
                                     placeholder="Status da Tarefa" required="">
                             </div>
@@ -371,9 +371,9 @@
                         <div id="produtos-container" class="space-y-4">
                             <div class="flex flex-col space-y-4 item">
                                 <!-- Rótulo para o campo de entrada do produto -->
-                                <label for="produto" class="block mb-2 text-sm font-medium text-blazeOrange">Id Tipo Tarefa</label>
+                                <label for="typeTaskId" class="block mb-2 text-sm font-medium text-blazeOrange">Id Tipo Tarefa</label>
                                 <!-- Campo de entrada de texto para inserir o número do produto -->
-                                <input type="text" name="produto[]" 
+                                <input type="text" name="typeTaskId" id = "typeTaskId"
                                        class="produto-input bg-white border border-blazeOrange text-blazeOrange text-sm rounded-lg focus:ring-blazeOrange focus:border-blazeOrange block w-full p-2.5" 
                                        placeholder="Digite o ID do Tipo da Tarefa" required="">
                                 
