@@ -1,0 +1,45 @@
+-- CREATE DATABASE SoloLeve; 
+
+USE SoloLeve;
+
+/*
+CREATE TABLE TiposTarefas (
+    id_type_task INT PRIMARY KEY AUTO_INCREMENT,
+    nome_type_task VARCHAR(100) NOT NULL UNIQUE
+);
+
+-- Criar Usuarios
+CREATE TABLE Usuarios (
+    id_usu INT PRIMARY KEY AUTO_INCREMENT,
+    nome_usu VARCHAR(100) NOT NULL,
+    email_usu VARCHAR(100) NOT NULL UNIQUE,
+    senha_usu VARCHAR(255) NOT NULL,
+    tentativas INT DEFAULT 0,
+    status_usu ENUM('admin','analista','desenvolvedor','noFunc') DEFAULT   'noFunc',
+    status ENUM('ativo', 'bloqueado', 'inativo') DEFAULT 'ativo'
+);
+
+-- Criar Desenvolvedores e TiposTarefas antes
+CREATE TABLE Desenvolvedores (
+    id_desenvol INT PRIMARY KEY AUTO_INCREMENT,
+    nome_desenvol VARCHAR(100) NOT NULL,
+    email_desenvol VARCHAR(100) NOT NULL UNIQUE,
+    id_usu INT,
+    FOREIGN KEY (id_usu) REFERENCES Usuarios(id_usu)
+);
+
+-- Criar Tarefas
+CREATE TABLE Tarefas (
+    id_task INT PRIMARY KEY AUTO_INCREMENT,
+    descricao_task TEXT NOT NULL,
+    desenvolvedor_id INT,
+    tipo_tarefa_id INT,
+    data_conclusao date,
+    status ENUM('pendente', 'em andamento', 'concluída') DEFAULT 'pendente',
+    FOREIGN KEY (desenvolvedor_id) REFERENCES Desenvolvedores(id_desenvol),
+    FOREIGN KEY (tipo_tarefa_id) REFERENCES TiposTarefas(id_type_task)
+);
+*/
+
+
+select * from Usuarios;
